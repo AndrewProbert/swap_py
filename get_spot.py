@@ -10,14 +10,5 @@ uniswap = Uniswap(address=address, private_key=private_key, version=version, pro
 token_1 = "0x0000000000000000000000000000000000000000" #tokens to be swapped
 token_2 = "0x0D8775F648430679A709E98d2b0Cb6250d2887EF" #second token to be swapped
 
-amount = 1
-
-
-# Get the price of ETH in DAI
-price = uniswap.get_price_input(token_1, token_2, amount * 10**18)
-print(f"price: {price}")
 
 print(uniswap.get_raw_price(token_1, token_2))
-
-
-print(uniswap.estimate_price_impact(token_1, token_2, amount * 10**18, 0))
