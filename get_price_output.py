@@ -7,8 +7,8 @@ provider = "https://mainnet.infura.io/v3/b931e338739a41d7a537c683bb2f21d5"    # 
 uniswap = Uniswap(address=address, private_key=private_key, version=version, provider=provider)
 
 # Some token addresses we'll be using later in this guide
-token_1 = "0x0000000000000000000000000000000000000000"
-token_2 = "0x0D8775F648430679A709E98d2b0Cb6250d2887EF"
+token_1 = "0x0000000000000000000000000000000000000000" #tokens to be swapped
+token_2 = "0x0D8775F648430679A709E98d2b0Cb6250d2887EF" #second token to be swapped
 
 amount = 1
 
@@ -16,6 +16,7 @@ amount = 1
 # Get the price of ETH in DAI
 price = uniswap.get_price_output(token_1, token_2, amount * 10**18)
 print(f"price: {price}")
+
 
 
 
